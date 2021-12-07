@@ -4,10 +4,6 @@ def parse_input2():
         return [line.rstrip() for line in raw_input]
 
 
-def q2_sample_input():
-    return ['forward 5', 'down 5', 'forward 8', 'up 3', 'down 8', 'forward 2']
-
-
 def q2_p1():
     original_input = parse_input2()
 

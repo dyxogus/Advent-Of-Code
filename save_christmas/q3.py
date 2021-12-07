@@ -18,13 +18,13 @@ def q3_p1():
                            for bit_index in range(each_entry_width)]
     half = all_measurements_count // 2
 
-    gamma_rate = [sum_ > half and 1 or 0 for sum_ in sums_of_bit_indices]
-    epsilon_rate = [sum_ < half and 1 or 0 for sum_ in sums_of_bit_indices]
+    gamma_rate_array = [sum_ > half and 1 or 0 for sum_ in sums_of_bit_indices]
+    epsilon_rate_array = [sum_ < half and 1 or 0 for sum_ in sums_of_bit_indices]
 
-    gamma_rate_decimal = convert_bit_array_to_decimal(gamma_rate)
-    epsilon_rate_decimal = convert_bit_array_to_decimal(epsilon_rate)
+    gamma_rate = convert_bit_array_to_decimal(gamma_rate_array)
+    epsilon_rate = convert_bit_array_to_decimal(epsilon_rate_array)
 
-    return gamma_rate_decimal * epsilon_rate_decimal
+    return gamma_rate * epsilon_rate
 
 
 def q3_p2():

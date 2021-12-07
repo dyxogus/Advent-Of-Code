@@ -1,11 +1,11 @@
-def parse_input2():
-    with open('../inputs/input_02.txt') as input_file:
+def parse_input(file_path='../inputs/input_02.txt'):
+    with open(file_path) as input_file:
         raw_input = input_file.readlines()  # brings everything into memory
         return [line.rstrip() for line in raw_input]
 
 
 def q2_p1():
-    original_input = parse_input2()
+    original_input = parse_input()
 
     horizontal, depth = 0, 0
     for line in original_input:
@@ -25,7 +25,7 @@ def q2_p1():
 
 
 def q2_p2():
-    original_input = parse_input2()
+    original_input = parse_input()
 
     horizontal, depth, aim = 0, 0, 0
     for line in original_input:

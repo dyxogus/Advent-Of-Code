@@ -1,9 +1,5 @@
-def q1_sample():
-    return [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
-
-
-def parse_input():
-    with open('../inputs/input_01.txt') as input_file:
+def parse_input(file_path='../inputs/input_01.txt'):
+    with open(file_path) as input_file:
         raw_input = input_file.readlines()  # brings everything into memory
         return [int(line.rstrip()) for line in raw_input]
 

@@ -1,3 +1,6 @@
+from save_christmas.beautifier.explicit import bool_to_int
+
+
 def parse_input(file_path='../inputs/input_03.txt'):
     with open(file_path) as input_file:
         raw_input = input_file.readlines()  # brings everything into memory
@@ -18,8 +21,8 @@ def q3_p1():
                            for bit_index in range(each_entry_width)]
     half = all_measurements_count // 2
 
-    gamma_rate_array = [sum_ > half and 1 or 0 for sum_ in sums_of_bit_indices]
-    epsilon_rate_array = [sum_ < half and 1 or 0 for sum_ in sums_of_bit_indices]
+    gamma_rate_array = [bool_to_int(sum_ > half) for sum_ in sums_of_bit_indices]
+    epsilon_rate_array = [bool_to_int(sum_ < half) for sum_ in sums_of_bit_indices]
 
     gamma_rate = convert_bit_array_to_decimal(gamma_rate_array)
     epsilon_rate = convert_bit_array_to_decimal(epsilon_rate_array)

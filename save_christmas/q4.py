@@ -32,7 +32,7 @@ class Bingo:
         self.numbers = numbers
         self.boards = boards
 
-    def do_game(self):
+    def find_earliest_winner(self):
         for number in self.numbers:
             logging.debug(f'Drawn number {number}')
             for board in self.boards:
@@ -92,7 +92,7 @@ def q4_p1(numbers_string, boards_string):
     boards = Bingo.parse_lines_to_boards(boards_string)
 
     bingo_game = Bingo(numbers, boards)
-    return bingo_game.do_game()
+    return bingo_game.find_earliest_winner()
 
 
 def q4_p2(numbers_string, boards_string):
